@@ -1,10 +1,11 @@
 package restaurante.model;
 
-public class ChickenBurguer implements Burguer{
+public class ChickenBurguer extends Burguer{
 
     @Override
     public void prepare() {
-        System.out.println("Preparing Chiken Burguer");
+        this.setMeat("Chicken");
+        System.out.println("Preparing " + this.getMeat() + " Burguer");
     }
 
 }

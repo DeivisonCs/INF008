@@ -1,5 +1,14 @@
 package restaurante.model;
 
-public interface Burguer {
-    public void prepare();
+public abstract class Burguer {
+    private String meat;
+
+    public void prepare(){};
+
+    public String getMeat(){
+        return meat;
+    }
+    public void setMeat(String meat){
+        this.meat = meat;
+    }
 }
