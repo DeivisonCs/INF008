@@ -1,9 +1,9 @@
-package techShop.factory;
+package factory;
 
-import techShop.model.gpu.AsusGpu;
-import techShop.model.gpu.Gpu;
-import techShop.model.monitor.AsusMonitor;
-import techShop.model.monitor.Monitor;
+import model.gpu.AsusGpu;
+import model.gpu.Gpu;
+import model.monitor.AsusMonitor;
+import model.monitor.Monitor;
 
 public class AsusFactory extends Shop{
 

@@ -1,9 +1,9 @@
-package techShop.factory;
+package factory;
 
-import techShop.model.gpu.Gpu;
-import techShop.model.gpu.MsiGpu;
-import techShop.model.monitor.Monitor;
-import techShop.model.monitor.MsiMonitor;
+import model.gpu.Gpu;
+import model.gpu.MsiGpu;
+import model.monitor.Monitor;
+import model.monitor.MsiMonitor;
 
 public class MsiFactory extends Shop{
 

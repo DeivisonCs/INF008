@@ -1,7 +1,7 @@
-package techShop.factory;
+package factory;
 
-import techShop.model.gpu.Gpu;
-import techShop.model.monitor.Monitor;
+import model.gpu.Gpu;
+import model.monitor.Monitor;
 
 public abstract class Shop {
 

@@ -1,4 +1,4 @@
-package techShop.model.monitor;
+package model.monitor;
 
 public class AsusMonitor implements Monitor{
     

@@ -1,4 +1,4 @@
-package techShop.model.gpu;
+package model.gpu;
 
 public class AsusGpu implements Gpu{
 

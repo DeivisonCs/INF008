@@ -1,4 +1,4 @@
-package techShop.model.gpu;
+package model.gpu;
 
 public interface Gpu {
     public void assemble();
