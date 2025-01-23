@@ -1,6 +1,7 @@
 import builder.SportCarBuilder;
 import builder.TruckBuilder;
 import builder.VehicleBuilder;
+import builder.director.VehicleDirector;
 import model.Vehicle;
 
 public class App {
@@ -26,7 +27,22 @@ public class App {
         System.out.println(vm270.toString());
     }
 
+    public void withDirector(){
+        VehicleDirector director = new VehicleDirector();
+        VehicleBuilder carBuilder = new SportCarBuilder();
+        VehicleBuilder truckBuilder = new TruckBuilder();
+
+        director.makeGtr35(carBuilder);
+        director.makeVolvo270(truckBuilder);
+
+        Vehicle gtr = carBuilder.build();
+        Vehicle vm270 = truckBuilder.build();
+
+        System.out.println(gtr.toString());
+        System.out.println(vm270.toString());
+    }
+
     public static void main(String[] args) throws Exception {
-        (new App()).withoutDirector();
+        (new App()).withDirector();
     }
 }
