@@ -1,6 +1,6 @@
 package notification.handler;
 
-import models.Event;
+import models.Event.EventInterface;
 import notification.strategy.NotificationStrategy;
 
 // Interface base do Chain of Responsibility
@@ -17,7 +17,7 @@ public abstract class NotificationHandler {
         return next;
     }
 
-    public void notify(Event event) {
+    public void notify(EventInterface event) {
         if (canHandle(event)) {
             processNotification(event);
         }
@@ -27,6 +27,6 @@ public abstract class NotificationHandler {
         }
     }
 
-    protected abstract boolean canHandle(Event event);
-    protected abstract void processNotification(Event event);
+    protected abstract boolean canHandle(EventInterface event);
+    protected abstract void processNotification(EventInterface event);
 }

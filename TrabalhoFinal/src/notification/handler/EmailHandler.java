@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
-import models.Event;
+import models.Event.EventInterface;
 import notification.strategy.EmailNotification;
 
 public class EmailHandler extends NotificationHandler {
@@ -14,13 +14,13 @@ public class EmailHandler extends NotificationHandler {
     }
 
     @Override
-    protected boolean canHandle(Event event) {
+    protected boolean canHandle(EventInterface event) {
         return (event.getPriority() >= 5 && event.startsAt(LocalDate.now())) ||
                (event.getPriority() >= 1 && event.startsBetween(LocalDateTime.now().minus(2, ChronoUnit.DAYS), LocalDateTime.now()));
     }
 
     @Override
-    protected void processNotification(Event event) {
+    protected void processNotification(EventInterface event) {
        super.strategy.send(event);
     }
 

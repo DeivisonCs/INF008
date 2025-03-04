@@ -2,7 +2,7 @@ package notification.handler;
 
 import java.time.LocalDate;
 
-import models.Event;
+import models.Event.EventInterface;
 import notification.strategy.WhatsAppNotification;
 
 public class WhatsAppHandler  extends NotificationHandler{
@@ -12,12 +12,12 @@ public class WhatsAppHandler  extends NotificationHandler{
     }
 
     @Override
-    protected boolean canHandle(Event event) {
+    protected boolean canHandle(EventInterface event) {
         return event.getPriority() == 10 && event.startsAt(LocalDate.now());
     }
 
     @Override
-    protected void processNotification(Event event) {
+    protected void processNotification(EventInterface event) {
        super.strategy.send(event);
     }
 

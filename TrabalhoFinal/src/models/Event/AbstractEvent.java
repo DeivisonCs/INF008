@@ -1,10 +1,10 @@
-package models;
+package models.Event;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 
-public class Event {
+public abstract class AbstractEvent implements EventInterface{
     private int priority;
     private LocalDate startDate;
     private LocalDate endDate;
@@ -12,7 +12,7 @@ public class Event {
     private String location;
     // private HashMap<String, String> contacts = new HashMap<>();
 
-    public Event(int priority, LocalDate startDate, LocalDate endDate, String description, String location) {
+    public AbstractEvent(int priority, LocalDate startDate, LocalDate endDate, String description, String location) {
         this.priority = priority;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -44,5 +44,4 @@ public class Event {
     public String getLocation() {
         return location;
     }
-    
 }

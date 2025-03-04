@@ -1,11 +1,11 @@
 package notification.strategy;
 
-import models.Event;
+import models.Event.EventInterface;
 
 public class SMSNotification implements NotificationStrategy {
 
     @Override
-    public void send(Event event) {
+    public void send(EventInterface event) {
         System.out.println("\nMessage sent by SMS:\n" +
                 "\n\tDescription: " + event.getDescription() +
                 "\n\tStarts At: " + event.getStartDate() +

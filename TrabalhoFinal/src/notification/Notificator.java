@@ -1,6 +1,6 @@
 package notification;
 
-import models.Event;
+import models.Event.EventInterface;
 import notification.handler.EmailHandler;
 import notification.handler.GoogleCalendarHandler;
 import notification.handler.NotificationHandler;
@@ -16,7 +16,7 @@ public class Notificator {
             .setNext(new EmailHandler());
     }
 
-    public void notify(Event event) {
+    public void notify(EventInterface event) {
         notificationChain.notify(event);
     }
 }

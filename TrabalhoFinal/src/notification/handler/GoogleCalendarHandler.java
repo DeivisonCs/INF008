@@ -1,6 +1,6 @@
 package notification.handler;
 
-import models.Event;
+import models.Event.EventInterface;
 import notification.strategy.GoogleCalendarNotification;
 
 public class GoogleCalendarHandler extends NotificationHandler{
@@ -10,12 +10,12 @@ public class GoogleCalendarHandler extends NotificationHandler{
     }
 
     @Override
-    protected boolean canHandle(Event event) {
+    protected boolean canHandle(EventInterface event) {
         return event.getPriority() >= 1;
     }
 
     @Override
-    protected void processNotification(Event event) {
+    protected void processNotification(EventInterface event) {
        super.strategy.send(event);
     }
 

@@ -1,7 +1,7 @@
 package notification.strategy;
 
-import models.Event;
+import models.Event.EventInterface;
 
 public interface NotificationStrategy {
-    public void send(Event event);
+    public void send(EventInterface event);
 }
